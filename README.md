@@ -1,11 +1,11 @@
-# freeloader
+#Freeloader
 swift package based sound preview
 
 ##Background
 I am in the process of refactoring my aging Appstore Project `Cloudsynth`.  
 Cloudsynth is a sample player, initially based on the SoundCloud.com sound library.
 
-I want to provide the user additional services like Freesound.com to download sounds from, so I started to refactor the whole Sound Download System, which I now present as a testable stand-alone project.
+I wanted to provide the user additional services like Freesound.com to download sounds from, so I started to refactor the whole Sound Download System, which I now present as a testable stand-alone project.
 
 ##Technology
 1. **Swift** (replacing Obj-C)
@@ -14,13 +14,14 @@ I want to provide the user additional services like Freesound.com to download so
 4. **NSDiffableDatasource** (replacing UITableViewDataSource)
 
 ##Usage
+- Locate the file `Freeloader/Freesound/Freesound/Sources/Freesound/FreesoundService.swift` and in line 14 enter the Freesound token provided 
 - Start the `FreesoundTester.xcodeproj`	 
 - Enter a search term (for example `bass` or  `guitar`)    
 - Tap return  
 - When the search is complete a table of downloadable sounds is presented
-- Tap on the `play` button to preview the sound
-- (The `download` button is not implemented outside `Cloudsynth`)
+- Tap on the `play` button to preview the sound (The `download` button is not implemented outside the `Cloudsynth` app)
+- Try another search...
 
 ###Credit
-- I show the `JGProgressHUD` while loading
+- I show `JGProgressHUD` while loading
 - I borrowed `MKImageDownloader` by Mohit Kumar to asynchronously load the waveform images.

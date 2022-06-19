@@ -10,7 +10,8 @@ import RemoteSound
 
 public struct FreesoundService : RemoteSoundService {
 	
-	let token = "7d936a39ec27ee866942d3bbb4884a1320c79325"
+	#warning("enter token")
+	let token = ""
 
 	public init() {
 	}
@@ -67,7 +68,7 @@ public struct FreesoundService : RemoteSoundService {
 	
 
 	func addDetail(listItem: FreesoundListItem, callback: @escaping (FreesoundDetailItem?, Error?) -> Void) {
-		guard let url = URL(string: "https://www.freesound.org/apiv2/sounds/\(listItem.id)/?token=7d936a39ec27ee866942d3bbb4884a1320c79325") else {
+		guard let url = URL(string: "https://www.freesound.org/apiv2/sounds/\(listItem.id)/?token=\(token)") else {
 			callback(nil, RemoteSoundServiceError.invalidURL)
 			return
 		}
