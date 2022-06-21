@@ -128,6 +128,10 @@ extension RemoteSoundViewController {
 	public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 80
 	}
+	
+	public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+		nil
+	}
 }
 
 extension UIColor {
