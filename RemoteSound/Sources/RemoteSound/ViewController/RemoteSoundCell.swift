@@ -20,7 +20,7 @@ class RemoteSoundCell: UITableViewCell {
 
 	let waveformView: UIImageView = {
 		let imageView = UIImageView()
-		imageView.image = UIImage.waveform.withTintColor(UIColor.csOrange, renderingMode: .alwaysOriginal)
+		imageView.image = UIImage.waveform // .withTintColor(UIColor.csOrange, renderingMode: .alwaysOriginal)
 		return imageView
 	}()
 	let nameLabel = UILabel()

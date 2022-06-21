@@ -25,10 +25,10 @@ extension UIImageView {
         
         MKImageDownloader().downloadAndCacheImage(url: url, onSuccess: { (image, url) in
             DispatchQueue.main.async {
-            if UIImageView.urlStore[tmpAddress] == url {
-                        self.image = image
-                        self.backgroundColor = .clear
-                    }
+				if UIImageView.urlStore[tmpAddress] == url {
+					self.image = image?.convert(color: UIColor.csOrange)
+					self.backgroundColor = .clear
+				}
             }
         }) { error in
         }
