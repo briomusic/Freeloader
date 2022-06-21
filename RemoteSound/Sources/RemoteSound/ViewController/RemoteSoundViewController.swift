@@ -130,4 +130,11 @@ extension RemoteSoundViewController {
 	}
 }
 
+extension UIColor {
+	
+	static let csOrange = UIColor(red: 1, green: 0.8, blue: 0.32, alpha: 1)
+	static let csRed = UIColor(red: 1, green: 0.32, blue: 0.24, alpha: 1)
+	
+}
+
 
