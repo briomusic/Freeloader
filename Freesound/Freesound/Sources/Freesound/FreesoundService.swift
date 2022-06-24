@@ -8,7 +8,7 @@
 import Foundation
 import RemoteSound
 
-public struct FreesoundService : RemoteSoundService {
+public class FreesoundService : RemoteSoundService {
 	
 	#warning("enter token")
 	let token = ""
@@ -24,7 +24,7 @@ public struct FreesoundService : RemoteSoundService {
 		
 		let request = URLRequest(url: url)
 		
-		URLSession.shared.dataTask(with: request) {  data, response, error in
+		URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
 			if let error = error {
 				callback(nil, error)
 				return
@@ -35,7 +35,8 @@ public struct FreesoundService : RemoteSoundService {
 				return
 			}
 
-			guard let list = try? JSONDecoder().decode(FreesoundList.self, from: data) else {
+			guard let self = self,
+				  let list = try? JSONDecoder().decode(FreesoundList.self, from: data) else {
 				callback(nil, RemoteSoundServiceError.parsingError)
 				return
 			}

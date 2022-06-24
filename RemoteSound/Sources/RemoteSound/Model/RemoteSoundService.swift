@@ -22,6 +22,6 @@ public enum RemoteSoundServiceError: Error {
 }
 
 
-public protocol RemoteSoundService {
+public protocol RemoteSoundService: AnyObject {
 	func fetch(searchType: SearchType, query: String, maxDuration: Double, callback: @escaping (RemoteSoundList?, Error?) -> Void)
 }
