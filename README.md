@@ -15,7 +15,7 @@ I wanted to provide the user additional services like Freesound.com to download 
 
 ##Usage
 - Locate the file `Freeloader/Freesound/Freesound/Sources/Freesound/FreesoundService.swift` and in line 14 enter the Freesound token provided 
-- Start the `FreesoundTester.xcodeproj`	 
+- Run the `FreesoundTester.xcodeproj` on an iOS device or simulator  
 - Enter a search term (for example `bass` or  `guitar`)    
 - Tap return  
 - When the search is complete a table of downloadable sounds is presented
@@ -24,4 +24,5 @@ I wanted to provide the user additional services like Freesound.com to download 
 
 ###Credit
 - I show `JGProgressHUD` while loading
-- I borrowed `MKImageDownloader` by Mohit Kumar to asynchronously load the waveform images.
+- I borrowed `MKImageDownloader` by Mohit Kumar to asynchronously load the waveform images  
+- I translated some obj-c code of unknown origin for my `UIImage+Color` extension
