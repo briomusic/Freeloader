@@ -5,7 +5,7 @@ swift package based sound preview
 I am in the process of refactoring my aging Appstore Project `Cloudsynth`.  
 Cloudsynth is a sample player, initially based on the SoundCloud.com sound library.
 
-I wanted to provide the user additional services like Freesound.com to download sounds from, so I started to refactor the whole Sound Download System, which I now present as a testable stand-alone project.
+I wanted to provide the user additional services like Freesound.org to download sounds from, so I started to refactor the whole Sound Download System, which I now present as a testable stand-alone project.
 
 ##Technology
 1. **Swift** (replacing Obj-C)
